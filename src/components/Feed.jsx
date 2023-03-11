@@ -1,6 +1,6 @@
 import { userState, useEffect } from 'react'
 import { Box, Stack, Typography } from '@mui/material'
-import SideBar from './SideBar'
+import { SideBar, Videos } from './components'
 
 const Feed = () => {
   return (
@@ -13,9 +13,24 @@ const Feed = () => {
         }}
       >
         <SideBar />
-        <Typography className="copyright" variant="body2" sx={{ mt:  1.5, color: '#fff'}}>
+        <Typography
+          className="copyright"
+          variant="body2"
+          sx={{ mt: 1.5, color: '#fff' }}
+        >
           Copyright 2023 Tayson
         </Typography>
+      </Box>
+      <Box p={2} sx={{ overflow: 'auto', height: '90vh', flex: 2 }}>
+        <Typography
+          variant="h4"
+          fontWeight="bold"
+          md={2}
+          sx={{ color: 'white' }}
+        >
+          New <span style={{ color: '#f31503' }}>Videos</span>
+        </Typography>
+        <Videos videos={[]} />
       </Box>
     </Stack>
   )
