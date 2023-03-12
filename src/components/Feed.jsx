@@ -1,8 +1,11 @@
 import { userState, useEffect } from 'react'
 import { Box, Stack, Typography } from '@mui/material'
-import { SideBar, Videos } from './components'
+import { SideBar, Videos } from './'
+import { fetchFromAPI } from '../utils/fetchFromAPI'
 
-const Feed = () => {
+
+
+function Feed() {
   return (
     <Stack sx={{ flexDirection: { sx: 'column', md: 'row' } }}>
       <Box
@@ -12,7 +15,7 @@ const Feed = () => {
           px: { sx: 0, md: 2 },
         }}
       >
-        <SideBar />
+        {/* <SideBar /> */}
         <Typography
           className="copyright"
           variant="body2"
